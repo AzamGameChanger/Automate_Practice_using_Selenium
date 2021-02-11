@@ -2,9 +2,11 @@ package com.codewithazam.Day9;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 public class ChildWindow {
@@ -24,5 +26,9 @@ public class ChildWindow {
 
         driver.switchTo().window(child);
         System.out.println(driver.findElement(By.cssSelector("h1[id='sampleHeading']")).getText());
+        driver.findElement(By.cssSelector("h1[id='sampleHeading']")).getText();
+        System.out.println(driver.findElement(By.cssSelector("h1[id='sampleHeading']")).getText().split(" ")[3].trim());
+
+
     }
 }
